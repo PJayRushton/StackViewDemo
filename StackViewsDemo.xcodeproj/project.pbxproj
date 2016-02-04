@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A139FD171C63C2BF00FCA8ED /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A139FD161C63C2BF00FCA8ED /* SecondViewController.swift */; };
+		A139FD191C63EBF800FCA8ED /* StackViewsDemo.gif in Resources */ = {isa = PBXBuildFile; fileRef = A139FD181C63EBF800FCA8ED /* StackViewsDemo.gif */; };
 		A15A56AC1BF547770086B66A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15A56AB1BF547770086B66A /* AppDelegate.swift */; };
 		A15A56AE1BF547770086B66A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15A56AD1BF547770086B66A /* ViewController.swift */; };
 		A15A56B11BF547770086B66A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A15A56AF1BF547770086B66A /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		A139FD161C63C2BF00FCA8ED /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		A139FD181C63EBF800FCA8ED /* StackViewsDemo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = StackViewsDemo.gif; sourceTree = "<group>"; };
 		A15A56A81BF547770086B66A /* StackViewsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackViewsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A15A56AB1BF547770086B66A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A15A56AD1BF547770086B66A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				A15A56B21BF547770086B66A /* Assets.xcassets */,
 				A15A56B41BF547770086B66A /* LaunchScreen.storyboard */,
 				A15A56B71BF547770086B66A /* Info.plist */,
+				A139FD181C63EBF800FCA8ED /* StackViewsDemo.gif */,
 			);
 			path = StackViewsDemo;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				A15A56B61BF547770086B66A /* LaunchScreen.storyboard in Resources */,
 				A15A56B31BF547770086B66A /* Assets.xcassets in Resources */,
 				A15A56B11BF547770086B66A /* Main.storyboard in Resources */,
+				A139FD191C63EBF800FCA8ED /* StackViewsDemo.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
