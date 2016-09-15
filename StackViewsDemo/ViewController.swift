@@ -10,29 +10,27 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var axisButton: UIButton!
     @IBOutlet weak var mainStack: UIStackView!
-    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var axisButton: UIButton!
     @IBOutlet weak var animatedSwitch: UISwitch!
-    @IBOutlet weak var orangeButton: UIButton!
+    @IBOutlet weak var removeButton: UIButton!
     @IBOutlet weak var orangeView: UIView!
     @IBOutlet weak var alphaSwitch: UISwitch!
     
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
         navigationController?.navigationBarHidden = true
     }
     
     
     // MARK: - IBActions
     
-    @IBAction func buttonPressed(sender: AnyObject) {
+    @IBAction func axisButtonPressed(sender: AnyObject) {
         toggleAxis()
     }
     
-    @IBAction func removeOrangeButtonPressed(sender: UIButton) {
+    @IBAction func removeButtonPressed(sender: UIButton) {
         toggleOrangeView(!orangeView.hidden)
     }
     
@@ -45,12 +43,12 @@ class ViewController: UIViewController {
                 self.mainStack.axis = self.mainStack.axis == .Vertical ? .Horizontal : .Vertical
                 }, completion: { success in
                     self.handleAxisChangeComplete()
-//                    self.removeLastSubview() // Uncomment to see what removing the last arrangedSubview looks like
+                    self.removeLastSubview() // Uncomment to see what removing the last arrangedSubview looks like
             })
         } else {
             mainStack.axis = mainStack.axis == .Vertical ? .Horizontal : .Vertical
             handleAxisChangeComplete()
-//            removeLastSubview() // Uncomment to see what removing the last arrangedSubview looks like
+            removeLastSubview(false) // Uncomment to see what removing the last arrangedSubview looks like
         }
     }
     
@@ -75,7 +73,7 @@ class ViewController: UIViewController {
         } else {
             orangeView.hidden = remove
         }
-        orangeButton.setTitle(orangeView.hidden ? "Add" : "Remove", forState: .Normal)
+        removeButton.setTitle(orangeView.hidden ? "Add" : "Remove", forState: .Normal)
     }
     
 }
