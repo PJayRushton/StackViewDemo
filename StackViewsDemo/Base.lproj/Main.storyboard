@@ -72,6 +72,9 @@
                                                         <state key="normal" title="Remove">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <variation key="heightClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="180" y="0.0" width="55" height="60"/>
+                                                        </variation>
                                                         <connections>
                                                             <action selector="removeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rsv-pO-uAe"/>
                                                         </connections>
@@ -83,6 +86,9 @@
                                                             <constraint firstAttribute="height" constant="50" id="PBA-eq-q4a"/>
                                                             <constraint firstAttribute="width" constant="50" id="thC-m7-OXD"/>
                                                         </constraints>
+                                                        <variation key="heightClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="182" y="60" width="50" height="50"/>
+                                                        </variation>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" misplaced="YES" text="Alpha" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EtS-wb-9HF">
                                                         <rect key="frame" x="29" y="649" width="44" height="21"/>
@@ -96,6 +102,9 @@
                                                             <mask key="constraints">
                                                                 <exclude reference="cIy-Cd-dYH"/>
                                                             </mask>
+                                                        </variation>
+                                                        <variation key="heightClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="185" y="110" width="44" height="21"/>
                                                         </variation>
                                                     </label>
                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BOq-6A-Rev">
@@ -284,17 +293,23 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="idv-vq-NlQ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nRM-yJ-gcm" userLabel="Image Holder">
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nRM-yJ-gcm" userLabel="Image Holder">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="268.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="1000" image="hipsterSkateboard" translatesAutoresizingMaskIntoConstraints="NO" id="qAO-o2-LPJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="268"/>
+                                                <variation key="heightClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="448.5"/>
+                                                </variation>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THE ALCHEMY COLLECTION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRW-6w-2wm">
                                                 <rect key="frame" x="77" y="124.5" width="220.5" height="20"/>
                                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="77" y="214.5" width="220.5" height="20"/>
+                                                </variation>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -306,47 +321,74 @@
                                             <constraint firstAttribute="trailing" secondItem="qAO-o2-LPJ" secondAttribute="trailing" id="rHK-lI-aMt"/>
                                             <constraint firstItem="qAO-o2-LPJ" firstAttribute="leading" secondItem="nRM-yJ-gcm" secondAttribute="leading" id="tfL-NT-cIG"/>
                                         </constraints>
+                                        <variation key="heightClass=compact" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="0.0" width="137" height="667"/>
+                                        </variation>
                                     </view>
-                                    <view contentMode="scaleToFill" verticalHuggingPriority="252" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="fjF-8F-WFU" userLabel="Text holder">
-                                        <rect key="frame" x="0.0" y="268.5" width="375" height="308.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wnQ-ie-EPl">
+                                        <rect key="frame" x="0.0" y="268.5" width="375" height="398.5"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kuR-83-ojH">
-                                                <rect key="frame" x="8" y="8" width="359" height="276.5"/>
+                                            <view contentMode="scaleToFill" verticalHuggingPriority="252" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="fjF-8F-WFU" userLabel="Text holder">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="308.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Alchemy Collection" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PaX-Qm-Smg">
-                                                        <rect key="frame" x="0.0" y="0.0" width="359" height="20"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="20" id="wzI-Xi-fVj"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fsj-0T-cXL">
-                                                        <rect key="frame" x="0.0" y="28" width="359" height="248.5"/>
-                                                        <mutableString key="text">You probably haven't heard of them XOXO lyft artisan, helvetica la croix poutine cornhole DIY. Typewriter shoreditch cornhole, ugh squid brunch portland cardigan meditation meh man bun. Art party etsy godard skateboard drinking vinegar. +1 polaroid kitsch, synth activated charcoal kinfolk slow-carb. Retro selvage forage snackwave lomo put a bird on it. Tumblr fingerstache authentic, DIY mumblecore organic pitchfork. Direct trade taxidermy letterpress snackwave tousled.
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kuR-83-ojH">
+                                                        <rect key="frame" x="8" y="8" width="359" height="276.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Alchemy Collection" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PaX-Qm-Smg">
+                                                                <rect key="frame" x="0.0" y="0.0" width="359" height="20"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="20" id="wzI-Xi-fVj"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=compact" misplaced="YES">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="222" height="20"/>
+                                                                </variation>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fsj-0T-cXL">
+                                                                <rect key="frame" x="0.0" y="28" width="359" height="248.5"/>
+                                                                <string key="text">You probably haven't heard of them XOXO lyft artisan, helvetica la croix poutine cornhole DIY. Typewriter shoreditch cornhole, ugh squid brunch portland cardigan meditation meh man bun. Art party etsy godard skateboard drinking vinegar. +1 polaroid kitsch, synth activated charcoal kinfolk slow-carb. Retro selvage forage snackwave lomo put a bird on it. Tumblr fingerstache authentic, DIY mumblecore organic pitchfork. Direct trade taxidermy letterpress snackwave tousled.
 
-Yuccie chartreuse subway tile you probably haven't heard of them scenester trust fund. Mumblecore vaporware banh mi, roof party cred post-ironic quinoa distillery jianbing brooklyn hot chicken lo-fi viral gastropub. Literally squid stumptown, health goth trust fund crucifix everyday carry. Waistcoat biodiesel viral distillery shabby chic, neutra thundercats. Tacos venmo mumblecore deep v, kogi messenger bag meh sriracha lyft chicharrones affogato quinoa. Pop-up fanny pack sriracha jean shorts, jianbing green juice raw denim direct trade keffiyeh street art viral. Pok pok fixie squid, hell of yr kickstarter chillwave listicle microdosing pug shabby chic normcore.</mutableString>
-                                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="12"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+Yuccie chartreuse subway tile you probably haven't heard of them scenester trust fund. Mumblecore vaporware banh mi, roof party cred post-ironic quinoa distillery jianbing brooklyn hot chicken lo-fi viral gastropub. Literally squid stumptown, health goth trust fund crucifix everyday carry. Waistcoat biodiesel viral distillery shabby chic, neutra thundercats. Tacos venmo mumblecore deep v, kogi messenger bag meh sriracha lyft chicharrones affogato quinoa. Pop-up fanny pack sriracha jean shorts, jianbing green juice raw denim direct trade keffiyeh street art viral. Pok pok fixie squid, hell of yr kickstarter chillwave listicle microdosing pug shabby chic normcore.</string>
+                                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="12"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <variation key="heightClass=compact" misplaced="YES">
+                                                                    <rect key="frame" x="0.0" y="28" width="222" height="517"/>
+                                                                </variation>
+                                                            </label>
+                                                        </subviews>
+                                                        <variation key="heightClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="8" y="8" width="222" height="545"/>
+                                                        </variation>
+                                                    </stackView>
                                                 </subviews>
-                                            </stackView>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="kuR-83-ojH" firstAttribute="top" secondItem="fjF-8F-WFU" secondAttribute="topMargin" id="Q0V-7u-5MV"/>
+                                                    <constraint firstAttribute="bottomMargin" secondItem="kuR-83-ojH" secondAttribute="bottom" constant="16" id="uEG-gL-i5a"/>
+                                                    <constraint firstItem="kuR-83-ojH" firstAttribute="leading" secondItem="fjF-8F-WFU" secondAttribute="leadingMargin" id="ver-SQ-tcM"/>
+                                                    <constraint firstAttribute="trailingMargin" secondItem="kuR-83-ojH" secondAttribute="trailing" id="zGC-dA-Ote"/>
+                                                </constraints>
+                                                <variation key="heightClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="0.0" width="238" height="577"/>
+                                                </variation>
+                                            </view>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="750" image="buyButton" translatesAutoresizingMaskIntoConstraints="NO" id="PvM-PA-2qd">
+                                                <rect key="frame" x="0.0" y="308.5" width="375" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="bl8-Yz-RHt"/>
+                                                </constraints>
+                                                <variation key="heightClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="577" width="238" height="90"/>
+                                                </variation>
+                                            </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstItem="kuR-83-ojH" firstAttribute="top" secondItem="fjF-8F-WFU" secondAttribute="topMargin" id="Q0V-7u-5MV"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="kuR-83-ojH" secondAttribute="bottom" constant="16" id="uEG-gL-i5a"/>
-                                            <constraint firstItem="kuR-83-ojH" firstAttribute="leading" secondItem="fjF-8F-WFU" secondAttribute="leadingMargin" id="ver-SQ-tcM"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="kuR-83-ojH" secondAttribute="trailing" id="zGC-dA-Ote"/>
-                                        </constraints>
-                                    </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="750" image="buyButton" translatesAutoresizingMaskIntoConstraints="NO" id="PvM-PA-2qd">
-                                        <rect key="frame" x="0.0" y="577" width="375" height="90"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="90" id="bl8-Yz-RHt"/>
-                                        </constraints>
-                                    </imageView>
+                                        <variation key="heightClass=compact" misplaced="YES">
+                                            <rect key="frame" x="137" y="0.0" width="238" height="667"/>
+                                        </variation>
+                                    </stackView>
                                 </subviews>
+                                <variation key="heightClass=compact" axis="horizontal" distribution="fillEqually"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
