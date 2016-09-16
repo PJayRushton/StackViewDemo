@@ -23,48 +23,39 @@ class ViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
-    
-    // MARK: - IBActions
-    
     @IBAction func axisButtonPressed(sender: AnyObject) {
-        toggleAxis()
+        toggleAxis(animatedSwitch.on)
     }
     
     @IBAction func removeButtonPressed(sender: UIButton) {
-        toggleOrangeView(!orangeView.hidden)
+        toggleOrangeView(remove: !orangeView.hidden)
     }
     
-    
-    // MARK: - Private functions
-    
-    private func toggleAxis() {
-        if animatedSwitch.on {
-            UIView.animateWithDuration(1, animations: { () -> Void in
+}
+
+extension ViewController {
+
+    private func toggleAxis(animated: Bool = true) {
+        if animated {
+            UIView.animateWithDuration(1, animations: {
                 self.mainStack.axis = self.mainStack.axis == .Vertical ? .Horizontal : .Vertical
-                }, completion: { success in
-                    self.handleAxisChangeComplete()
-//                    self.removeLastSubview() // Uncomment to see what removing the last arrangedSubview looks like
+            }, completion: { success in
+                    self.updateAxisButtonTitle()
             })
         } else {
             mainStack.axis = mainStack.axis == .Vertical ? .Horizontal : .Vertical
-            handleAxisChangeComplete()
-//            removeLastSubview(false) // Uncomment to see what removing the last arrangedSubview looks like
+            updateAxisButtonTitle()
         }
     }
     
-    private func handleAxisChangeComplete() {
-        axisButton.setTitle(mainStack.axis == .Horizontal ? "Horizontal" : "Veritcal", forState: .Normal)
+    private func updateAxisButtonTitle() {
+        let newTitle = mainStack.axis == .Horizontal ? "Go vertical" : "Go horizontal"
+        axisButton.setTitle(newTitle, forState: .Normal)
     }
     
-    private func removeLastSubview(hidden: Bool = true) { // If `false` views are removed from `arrangedSubviews` but still visible ( and no longer managed by the stackView)
-            let last = mainStack.arrangedSubviews.last!
-            last.hidden = hidden
-            mainStack.removeArrangedSubview(last)
-            print("Subviews: \(mainStack.subviews.count)")
-            print("ArrangedSubviews: \(mainStack.arrangedSubviews.count)")
-    }
+    // MARK: - Toggle orange view
     
-    private func toggleOrangeView(remove: Bool) {
+    private func toggleOrangeView(remove remove: Bool) {
         if animatedSwitch.on {
             UIView.animateWithDuration(0.5, animations: {
                 self.orangeView.hidden = remove
@@ -73,7 +64,6 @@ class ViewController: UIViewController {
         } else {
             orangeView.hidden = remove
         }
-        removeButton.setTitle(orangeView.hidden ? "Add" : "Remove", forState: .Normal)
     }
     
 }
