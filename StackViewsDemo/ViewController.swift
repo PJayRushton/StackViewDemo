@@ -18,51 +18,51 @@ class ViewController: UIViewController {
     @IBOutlet weak var alphaSwitch: UISwitch!
     
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
-    @IBAction func axisButtonPressed(sender: AnyObject) {
-        toggleAxis(animatedSwitch.on)
+    @IBAction func axisButtonPressed(_ sender: AnyObject) {
+        toggleAxis(animatedSwitch.isOn)
     }
     
-    @IBAction func removeButtonPressed(sender: UIButton) {
-        toggleOrangeView(remove: !orangeView.hidden)
+    @IBAction func removeButtonPressed(_ sender: UIButton) {
+        toggleOrangeView(remove: !orangeView.isHidden)
     }
     
 }
 
 extension ViewController {
 
-    private func toggleAxis(animated: Bool = true) {
+    fileprivate func toggleAxis(_ animated: Bool = true) {
         if animated {
-            UIView.animateWithDuration(1, animations: {
-                self.mainStack.axis = self.mainStack.axis == .Vertical ? .Horizontal : .Vertical
+            UIView.animate(withDuration: 1, animations: {
+                self.mainStack.axis = self.mainStack.axis == .vertical ? .horizontal : .vertical
             }, completion: { success in
                     self.updateAxisButtonTitle()
             })
         } else {
-            mainStack.axis = mainStack.axis == .Vertical ? .Horizontal : .Vertical
+            mainStack.axis = mainStack.axis == .vertical ? .horizontal : .vertical
             updateAxisButtonTitle()
         }
     }
     
-    private func updateAxisButtonTitle() {
-        let newTitle = mainStack.axis == .Horizontal ? "Go vertical" : "Go horizontal"
-        axisButton.setTitle(newTitle, forState: .Normal)
+    fileprivate func updateAxisButtonTitle() {
+        let newTitle = mainStack.axis == .horizontal ? "Go vertical" : "Go horizontal"
+        axisButton.setTitle(newTitle, for: UIControlState())
     }
     
     // MARK: - Toggle orange view
     
-    private func toggleOrangeView(remove remove: Bool) {
-        if animatedSwitch.on {
-            UIView.animateWithDuration(0.5, animations: {
-                self.orangeView.hidden = remove
-                self.orangeView.alpha = self.alphaSwitch.on && remove ? 0 : 1
+    fileprivate func toggleOrangeView(remove: Bool) {
+        if animatedSwitch.isOn {
+            UIView.animate(withDuration: 0.5, animations: {
+                self.orangeView.isHidden = remove
+                self.orangeView.alpha = self.alphaSwitch.isOn && remove ? 0 : 1
             })
         } else {
-            orangeView.hidden = remove
+            orangeView.isHidden = remove
         }
     }
     
